@@ -3,6 +3,8 @@ from flask_cors import CORS
 from chat import get_response
 import nltk
 import os
+nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.data.path.append(os.path.join(os.getcwd(), "nltk_data"))
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
